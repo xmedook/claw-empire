@@ -1,0 +1,15 @@
+services:
+  claw-empire:
+    build:
+      context: .
+      dockerfile: Dockerfile.openclaw
+    container_name: claw-empire
+    restart: unless-stopped
+    env_file:
+      - .env.docker
+    ports:
+      - "8790:8790"
+    volumes:
+      - ./data:/app/data
+      - /root/.openclaw:/host-openclaw:ro
+    working_dir: /app
