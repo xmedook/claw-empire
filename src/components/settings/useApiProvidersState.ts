@@ -141,7 +141,10 @@ export function useApiProvidersState({ tab, t }: { tab: SettingsTab; t: TFunctio
   const handleApiModelAssign = useCallback(async (providerId: string, model: string) => {
     setApiAssignTarget({ providerId, model });
     try {
-      const [agents, depts] = await Promise.all([api.getAgents(), api.getDepartments()]);
+      const [agents, depts] = await Promise.all([
+        api.getAgents(),
+        api.getDepartments({ workflowPackKey: "development" }),
+      ]);
       setApiAssignAgents(agents);
       setApiAssignDepts(depts);
     } catch (error) {
