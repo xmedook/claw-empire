@@ -136,8 +136,8 @@ export default function AppHeaderBar({
           className="header-action-btn header-action-btn-primary"
           aria-label={tasksPrimaryLabel}
         >
-          <span className="sm:hidden">📋</span>
-          <span className="hidden sm:inline">📋 {tasksPrimaryLabel}</span>
+          <span className="lg:hidden">📋</span>
+          <span className="hidden lg:inline">📋 {tasksPrimaryLabel}</span>
         </button>
         <button
           onClick={onOpenDecisionInbox}
@@ -147,8 +147,8 @@ export default function AppHeaderBar({
           }`}
           aria-label={decisionLabel}
         >
-          <span className="sm:hidden">{decisionInboxLoading ? "⏳" : "🧭"}</span>
-          <span className="hidden sm:inline">
+          <span className="lg:hidden">{decisionInboxLoading ? "⏳" : "🧭"}</span>
+          <span className="hidden lg:inline">
             {decisionInboxLoading ? "⏳" : "🧭"} {decisionLabel}
           </span>
           {decisionInboxCount > 0 && <span className="header-decision-badge">{decisionInboxCount}</span>}
@@ -160,8 +160,8 @@ export default function AppHeaderBar({
           {reportLabel}
         </button>
         <button onClick={onOpenAnnouncement} className="header-action-btn header-action-btn-secondary">
-          <span className="sm:hidden">📢</span>
-          <span className="hidden sm:inline">{announcementLabel}</span>
+          <span className="lg:hidden">📢</span>
+          <span className="hidden lg:inline">{announcementLabel}</span>
         </button>
         <button onClick={onOpenRoomManager} className="header-action-btn header-action-btn-secondary mobile-hidden">
           {roomManagerLabel}
@@ -310,7 +310,7 @@ export default function AppHeaderBar({
         </div>
         <div className="flex items-center gap-2 text-xs" style={{ color: "var(--th-text-muted)" }}>
           <div className={`w-2 h-2 rounded-full ${connected ? "bg-green-500" : "bg-red-500"}`} />
-          <span className="hidden sm:inline">{connected ? "Live" : "Offline"}</span>
+          <span className="hidden lg:inline">{connected ? "Live" : "Offline"}</span>
         </div>
       </div>
     </header>
