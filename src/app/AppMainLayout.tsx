@@ -355,7 +355,6 @@ export default function AppMainLayout({
           />
         )}
         <div
-          style={{ paddingTop: "env(safe-area-inset-top)", paddingBottom: "env(safe-area-inset-bottom)" }}
           className={`fixed inset-y-0 left-0 z-50 transition-transform duration-200 lg:hidden ${
             mobileNavOpen ? "translate-x-0" : "-translate-x-full pointer-events-none"
           }`}

@@ -70,12 +70,12 @@ export default function AppHeaderBar({
   return (
     <header
       className="sticky top-0 z-30 flex items-center justify-between px-3 py-2 backdrop-blur-sm sm:px-4 sm:py-3 lg:px-6"
-      style={{ borderBottom: "1px solid var(--th-border)", background: "var(--th-bg-header)", paddingLeft: "max(0.75rem, env(safe-area-inset-left))", paddingRight: "max(0.75rem, env(safe-area-inset-right))" }}
+      style={{ borderBottom: "1px solid var(--th-border)", background: "var(--th-bg-header)" }}
     >
       <div className="flex min-w-0 items-center gap-2">
         <button
           onClick={onOpenMobileNav}
-          className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg transition lg:hidden"
+          className="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg transition lg:hidden"
           style={{
             border: "1px solid var(--th-border)",
             background: "var(--th-bg-surface)",
